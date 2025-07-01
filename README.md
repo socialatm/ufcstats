@@ -50,24 +50,8 @@ This keeps the data files up to date with the latest fight and fighter stats and
 <br>
 <br>
 
-## Next Steps
-
-~~Data Refresh for Fights - Parse and refresh new fight data programmatically when there are new events~~
-
-~~Scrape Fighter Details - Get all fighter's tale of the tape (e.g. height, weight, etc.)~~
-
-~~Data Refresh for Fighters - Parse and refresh new fighter details programmatically when there are new fighters added to the roster~~
-
-Clean Data - Clean data to be used for further analysis
-
-Data Exploration - Plot and visualise stats
-
-Prediction - Build a machine learning model to predict the outcome of fights
-<br>
-<br>
-<br>
-
 ## Next Event
 ```python
 cd next_event/next_event
 py -m scrapy crawl event
+```
