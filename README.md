@@ -1,17 +1,15 @@
 # Scrape UFC Stats
 Scrape all available UFC events data, fights stats, and fighter details and from [ufcstats.com](http://ufcstats.com/) and save in CSV format.
-<br>
-<br>
-<br>
 
 ## Prerequisites
 ```
 Python 3
 ```
-Install requirements with `pip install -r requirements.txt`
-<br>
-<br>
-<br>
+Install requirements with 
+```python
+pip install -r requirements.txt
+```
+
 
 ## Introduction
 
