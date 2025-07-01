@@ -1,11 +1,8 @@
 # Scrape UFC Stats
 Scrape all available UFC events data, fights stats, and fighter details and from [ufcstats.com](http://ufcstats.com/) and save in CSV format.
 
-## Prerequisites
-```
-Python 3
-```
-Install requirements with 
+## Install
+
 ```python
 pip install -r requirements.txt
 ```
@@ -45,7 +42,7 @@ Find the next upcoming UFC event, and extract details about every fight schedule
 
 Saved to a CSV file named next_event.csv.
 
-### Usage
+### Usage:
 
 from the root directory:
 ```python
