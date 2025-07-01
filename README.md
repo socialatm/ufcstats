@@ -10,7 +10,6 @@ Install requirements with
 pip install -r requirements.txt
 ```
 
-
 ## Introduction
 
 Data for all events, fights, and fighters have scraped and saved as the following data files:
@@ -34,19 +33,11 @@ Once you have the up-to-date historical data for fight stats, you can run the no
 
 The notebook `scrape_ufc_stats_working_example.ipynb` can be used for testing or debugging. The code here is broken down into sections which can be executed to scrape single data points, e.g. scraping stats for one fight only.
 
-Do feel free to reach out with any comments, suggestions, or issues. 😃
-<br>
-<br>
-<br>
-
 ## Data Refresh
 
 The script `scrape_ufc_stats_unparsed_data.py` has been added to [PythonAnywhere](https://www.pythonanywhere.com/?affiliate_id=00a8b72b) and will run daily to check and scrape new fights and fighters and push the refreshed data files to this repository. 
 
 This keeps the data files up to date with the latest fight and fighter stats and you can quickly download and use the CSV files above without running any code.
-<br>
-<br>
-<br>
 
 ## Next Event
 
