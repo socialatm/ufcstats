@@ -1,5 +1,5 @@
 # Scrape UFC Stats
-Scrape all available UFC events data, fights stats, and fighter details and from [ufcstats.com](http://ufcstats.com/) and save in CSV format.
+Scrape all available UFC events data, fights stats, and fighter details from [ufcstats.com](http://ufcstats.com/) and save in CSV format.
 
 ## Install
 
