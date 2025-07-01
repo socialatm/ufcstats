@@ -23,8 +23,8 @@ ufc_fighter_tott.csv
 ```
 
 To download the CSV files without running any code, click `Code` > `Download ZIP` or clone the repo.
-<br>
-<br>
+
+***
 
 You can also scrape the all data for fight stats again using the notebook `scrape_ufc_stats_all_historical_data.ipynb`, and all data for fighter tale of the tape again using the notebook `scrape_ufc_stats_fighter_tott.ipynb`.
 Do note these will each take a few hours to complete.
