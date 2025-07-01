@@ -66,3 +66,8 @@ Prediction - Build a machine learning model to predict the outcome of fights
 <br>
 <br>
 <br>
+
+## Next Event
+```python
+cd next_event/next_event
+py -m scrapy crawl event
