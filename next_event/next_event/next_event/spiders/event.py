@@ -40,13 +40,15 @@ class EventSpider(scrapy.Spider):
             "event_name": event_name_raw[0] if event_name_raw else "Unknown Event",
         }
 
-        yield from response.follow_all(
-            future_matchups,
-            self.parse_future_matchups,
-            cb_kwargs={"event_context": event_context},
-        )
+        # Iterate through matchups to preserve order and pass the bout number.
+        for i, matchup_url in enumerate(future_matchups, start=1):
+            yield response.follow(
+                matchup_url,
+                self.parse_future_matchups,
+                cb_kwargs={"event_context": event_context, "bout_number": i},
+            )
 
-    def parse_future_matchups(self, response, event_context):
+    def parse_future_matchups(self, response, event_context, bout_number):
         fighter_names = normalize_results(
             response.css("a.b-fight-details__table-header-link::text").getall()
         )
@@ -57,10 +59,10 @@ class EventSpider(scrapy.Spider):
         bout = normalize_results(
             response.css("i.b-fight-details__fight-title::text").getall()
         )[0]
-        
+
         # BUG FIX: Use the imported NextEventItem, not FutureFightItem
         item = NextEventItem()
-        item["bout_number"] = response.css("span.b-fight-details__fight-number::text").get()
+        item["bout_number"] = bout_number
         item["fighter_1"] = fighter_1
         item["fighter_2"] = fighter_2
         item["date"] = event_context.get("date")
