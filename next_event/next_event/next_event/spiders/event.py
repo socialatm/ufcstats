@@ -60,6 +60,7 @@ class EventSpider(scrapy.Spider):
         
         # BUG FIX: Use the imported NextEventItem, not FutureFightItem
         item = NextEventItem()
+        item["bout_number"] = response.css("span.b-fight-details__fight-number::text").get()
         item["fighter_1"] = fighter_1
         item["fighter_2"] = fighter_2
         item["date"] = event_context.get("date")
